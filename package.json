@@ -1,19 +1,33 @@
 {
-  "name": "stock-chart-server",
-  "version": "1.0.0",
-  "description": "Express server to retireve stock data from IEX API.",
-  "main": "server.js",
-  "dependencies": {
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "nodemon": "^1.18.9",
-    "request": "^2.88.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+	"name": "stock-chart-server",
+	"version": "1.0.0",
+	"description": "Express server to retireve stock data from IEX API.",
+	"main": "server.js",
+	"dependencies": {
+		"dotenv": "^6.2.0",
+		"express": "^4.17.1",
+		"request": "^2.88.2"
+	},
+	"devDependencies": {
+		"nodemon": "^1.19.4"
+	},
+	"scripts": {
+		"start": "nodemon server.js",
+		"scripts": {
+			"start": "node server.js",
+			"heroku-postbuild": "cd client && npm install && npm run build",
+			"test": "echo \"Error: no test specified\" && exit 1"
+		}
+	},
+	"author": "",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/walkerofthewoods/stock-chart-proxy-express.git"
+	},
+	"keywords": [],
+	"bugs": {
+		"url": "https://github.com/walkerofthewoods/stock-chart-proxy-express/issues"
+	},
+	"homepage": "https://github.com/walkerofthewoods/stock-chart-proxy-express#readme"
 }

@@ -11,14 +11,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  const symbol = req.query["symbol"];
-  const range = req.query["range"];
-  const url = `https://api.iextrading.com/1.0/stock/market/batch?symbols=${symbol}&types=quote,chart&range=${range}`;
+app.get("/superheroproxy", (req, res) => {
+  const id = req.query["id"];
+  const url = `https://superheroapi.com/api/10114226739421973/${id}/image`;
 
   request(url).pipe(res);
 });
 
 app.listen(port, () =>
-  console.log(`StockChart app listening on port ${port}!`)
+  console.log(`superheroapi-cors app listening on port ${port}!`)
 );
